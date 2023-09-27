@@ -2,7 +2,6 @@ package com.ruyuan.fulfill.customer;
 
 import com.ruyuan.fulfill.domain.customer.Customer;
 import com.ruyuan.fulfill.domain.customer.gateway.CustomerGateway;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
