@@ -1,4 +1,4 @@
-package com.ruyuan.fulfill.event.listener;
+package com.ruyuan.fulfill.api.event.listener;
 
 import com.ruyuan.fulfill.application.command.OrderFulfillCommand;
 import com.ruyuan.fulfill.application.command.dto.OrderDTO;

@@ -1,7 +1,8 @@
-package com.ruyuan.fulfill.rpc;
+package com.ruyuan.fulfill.api.rpc;
 
 import com.ruyuan.fulfill.application.command.GetOrderFulfillCommand;
 import com.ruyuan.fulfill.application.command.dto.FulfillOrderDTO;
+import com.ruyuan.fulfill.rpc.FulfillApi;
 import com.ruyuan.fulfill.rpc.dto.FulfillOrderCO;
 import com.ruyuan.fulfill.application.service.FulfillApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;

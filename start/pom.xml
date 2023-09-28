@@ -13,10 +13,10 @@
     <name>start</name>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>com.ruyuan.fulfill</groupId>-->
-<!--            <artifactId>fulfill-api</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.ruyuan.fulfill</groupId>
+            <artifactId>fulfill-api</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -36,4 +36,35 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.ruyuan.fulfill.Application</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

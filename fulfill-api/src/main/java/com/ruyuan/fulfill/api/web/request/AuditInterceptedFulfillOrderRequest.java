@@ -1,4 +1,4 @@
-package com.ruyuan.fulfill.web.request;
+package com.ruyuan.fulfill.api.web.request;
 
 public class AuditInterceptedFulfillOrderRequest {
 }

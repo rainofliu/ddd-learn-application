@@ -1,8 +1,8 @@
 package com.ruyuan.fulfill.application.command.executor;
 
-import com.ruyuan.fulfill.application.converter.FulfillOrderConverter;
 import com.ruyuan.fulfill.application.command.OrderFulfillCommand;
 import com.ruyuan.fulfill.application.command.dto.OrderDTO;
+import com.ruyuan.fulfill.application.converter.FulfillOrderConverter;
 import com.ruyuan.fulfill.domain.event.OrderInterceptedEvent;
 import com.ruyuan.fulfill.domain.gateway.DomainEventGateway;
 import com.ruyuan.fulfill.domain.gateway.FulfillOrderGateway;
@@ -59,6 +59,10 @@ public class OrderFulfillCommandExecutor {
 
         // 第二步，预分仓
         Warehouse warehouse = warehouseDomainService.preAllocateWareHouse(fulfillOrder);
+        if (null == warehouse) {
+            // 预分仓失败 抛出异常
+            return;
+        }
 
         // 第三步，风控拦截
         Boolean riskControlIntercept = riskControlApiGateway.riskControlIntercept(fulfillOrder);
@@ -69,8 +73,8 @@ public class OrderFulfillCommandExecutor {
         }
 
         // 第四步，分物流
-        logisticsDomainService.allocateLogistics(fulfillOrder,warehouse);
+        logisticsDomainService.allocateLogistics(fulfillOrder, warehouse);
         // 第五步，下发库房
-        warehouseApiGateway.sendFulfillOrder(fulfillOrder,warehouse);
+        warehouseApiGateway.sendFulfillOrder(fulfillOrder, warehouse);
     }
 }

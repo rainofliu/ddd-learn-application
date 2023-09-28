@@ -1,13 +1,13 @@
-package com.ruyuan.fulfill.web.controller;
+package com.ruyuan.fulfill.api.web.controller;
 
+import com.ruyuan.fulfill.api.web.request.QueryInterceptedFulfillOrderRequest;
+import com.ruyuan.fulfill.api.web.response.AuditInterceptedFulfillOrderResponse;
+import com.ruyuan.fulfill.api.web.response.QueryInterceptedFulfillOrderResponse;
 import com.ruyuan.fulfill.application.command.AuditInterceptedFulfillOrderCommand;
 import com.ruyuan.fulfill.application.command.dto.InterceptedFulfillOrdersDTO;
 import com.ruyuan.fulfill.application.command.query.InterceptedFulfillOrderQuery;
 import com.ruyuan.fulfill.application.service.FulfillApplicationService;
-import com.ruyuan.fulfill.web.request.AuditInterceptedFulfillOrderRequest;
-import com.ruyuan.fulfill.web.request.QueryInterceptedFulfillOrderRequest;
-import com.ruyuan.fulfill.web.response.AuditInterceptedFulfillOrderResponse;
-import com.ruyuan.fulfill.web.response.QueryInterceptedFulfillOrderResponse;
+import com.ruyuan.fulfill.api.web.request.AuditInterceptedFulfillOrderRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
