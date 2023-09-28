@@ -13,10 +13,10 @@
     <name>start</name>
 
     <dependencies>
-        <dependency>
-            <groupId>com.ruyuan.fulfill</groupId>
-            <artifactId>fulfill-api</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.ruyuan.fulfill</groupId>-->
+<!--            <artifactId>fulfill-api</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

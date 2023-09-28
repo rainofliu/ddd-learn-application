@@ -1,5 +1,6 @@
 package com.ruyuan.fulfill;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,7 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author Frank Zhang
  */
-@SpringBootApplication(scanBasePackages = {"com.ruyuan.fulfill"})
+@SpringBootApplication(scanBasePackages = {"com.ruyuan.fulfill","com.alibaba.cola"})
+@MapperScan("com.ruyuan.fulfill.infrastructure.gatewayimpl.database")
 public class Application {
 
     public static void main(String[] args) {

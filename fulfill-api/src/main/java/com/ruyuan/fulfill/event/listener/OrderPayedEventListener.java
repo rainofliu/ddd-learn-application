@@ -1,9 +1,9 @@
 package com.ruyuan.fulfill.event.listener;
 
-import com.ruyuan.fulfill.command.OrderFulfillCommand;
-import com.ruyuan.fulfill.command.dto.OrderDTO;
+import com.ruyuan.fulfill.application.command.OrderFulfillCommand;
+import com.ruyuan.fulfill.application.command.dto.OrderDTO;
 import com.ruyuan.fulfill.domain.event.OrderPayedEvent;
-import com.ruyuan.fulfill.service.FulfillApplicationService;
+import com.ruyuan.fulfill.application.service.FulfillApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
